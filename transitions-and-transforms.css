@@ -1,0 +1,130 @@
+div{
+    
+    height:60px;
+    width:200px;
+    position:absolute;
+    top:20%;
+    left:20%;
+    background-color:aqua;
+    border:5px solid red;
+    /* transition property in css */
+    /* 
+    CSS transitions allows us to change property values smoothly,
+    over a given duration.
+    To create a transition effect,
+    you must specify two things: the CSS property you want to add an effect to the duration of the effect Note: If the duration part is not specified,
+    the transition will have no effect,
+    because the default value is 0.
+    */
+    /* The shorthand CSS syntax is written as follows: */
+    /* 
+
+   
+        transition: <property> <duration> <timing-function> <delay>;
+    
+
+    */
+    transition:all 5s ease-in-out 0.5s;
+    
+
+
+}
+
+div:hover {
+    
+    /* transform: rotateX(90deg); */
+    /*
+     whenever we use rotateX() or rotateY() the element will rotate by 90 degree 
+    is in xy-plane currently and we are viewing it from front 
+    so, if we use rotateX(90deg) then the element will become parallel
+    to x-z plane and we will not be able to see anything on screen 
+ as we will be viewing it from front and its front view of the rotated element will
+ always be a line.
+     */
+
+     /* 1.  rotate() */
+     /* to rotate an element in clockwise direction we 
+    use rotate() and  pass +ve values as argument inside the rotate()
+    if we wamt to rotate an element in anti-clockwise drection then we will 
+    pass -ve value in rotate. 
+    */
+     /* transform: rotate(60deg); */
+
+     /* transform: rotateX(90deg); */
+
+     /* why does the div disappear when we set the degree to 90*/
+     /* use the hover effect to see the changes and apply a border around the div */
+     /* border:5px solid red;
+    /* transition:all 10s ease-in-out; */
+     /* apply rotateX() on hover to see the changes */
+
+     /* 2. transform()   */
+     /* to incrase or decrease the size of the element we use scale
+     */
+     /* we can assign different values of scale for x-axis and y-axis respectively.
+      */
+     /* transform:scale(2); */
+
+     /* 3. transalate() */
+     /* syntax of transalate() */
+     /* The translate() CSS function repositions an element in the horizontal and/or vertical directions. 
+    This transformation is characterized by a two-dimensional vector. Its coordinates define how much the element moves in each direction. Syntax
+    a.Single <length-percentage> values -->
+    transform: translate(200px);
+    transform: translate(50%); 
+
+    b.Double <length-percentage> values -->
+    transform: translate(100px, 200px);
+    /* transform: translate(100px, 50%); /// here length in % is taken from the element that is to be transalated or moved
+     /// i.e 50% of the element that is to be moved. 
+    transform: translate(30%, 200px);
+    transform: translate(30%, 50%);
+
+    Single <length-percentage>values This value is a <length>or <percentage>representing the abscissa
+     (horizontal, x-coordinate) of the translating vector.
+
+    Double <length-percentage>values This value describes two <length>or <percentage>values 
+    representing both the abscissa (x-coordinate) and the ordinate (y-coordinate) of the translating vector.
+     */
+
+     /* transform: translate(200px); */
+
+     /* 4. skew() */
+     /* 
+    Syntax-->
+    The skew() function is specified with either one or two values,
+    which represent the amount of skewing to be applied in each direction.
+     If you only specify one value it is used for the x-axis and there will
+      be no skewing on the y-axis.
+    
+     skew(ax)
+     skew(ax, ay)
+
+    Values:--
+    ax
+     Is an <angle>representing the angle to use to distort the element along the x-axis (or abscissa).
+    
+    ay
+     Is an <angle>representing the angle to use to distort the element along the y-axis .
+      If not defined,
+    its default value is 0,
+    resulting in a purely horizontal skewing.
+
+     */
+
+     /* transform: skew(10deg); */
+
+     /* changing 2 properties of the div at once and using transition to animate the changes */
+    height: 400px;
+    width:400px;
+    transform: skew(-30deg);
+    border:3px dashed black;
+    background: burlywood;
+    /*
+    we cannot use transform twice in a single place as 
+    the 2nd transform will override the first one and we will not be able to see its effects
+     */
+    /* transform: rotate(360deg); */ 
+    /* border-radius: 50%; */
+   
+}

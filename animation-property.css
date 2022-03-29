@@ -1,0 +1,39 @@
+
+@keyframes changeShape{
+
+    /* initial state of animaton i.e animation is 0% done */
+    from{ border-radius:0%; }
+    /* final state of animation i.e animation is 100% done */
+    to { border-radius: 50% }
+ 
+    /* in animation we can also apply a particular css change when the 
+    animation is at a particular stage i.e animation is completed by some percentage 
+    lets say 25% then we can apply a particular css rule that will be applicable 
+    only if the animaation is 25% complete. after that there will br no effect of that css rule.*/
+    
+}
+
+
+div{
+
+    position: absolute;
+    height:200px;
+    width:200px;
+    top:40%;
+    left:40%;
+    background-color: aquamarine;
+    /* 
+    number of times animation needs to run is counted as
+    the transition of the element from it's initial state 
+    to final state is counted as 1 and then back to its initial state is also counted .
+    so in total 2 animations.
+    */
+    /* 3s is the time taken for the animation to reach from its from state to its to state */
+    /* ease-in-out means that the transation or animation will start and end smoothly */
+    /* if we want that the transation of the animation from its from state to its to state should also take 3s then 
+    we must use the word  "alternate" this will make the to-from as well as from-to transition of the element smooth and it will take 
+    3s for both.
+    */
+    animation: changeShape 3s ease-in-out 3 alternate;
+
+}

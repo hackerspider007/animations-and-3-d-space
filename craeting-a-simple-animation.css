@@ -1,0 +1,26 @@
+div{
+
+    width:100px;
+    height:100px;
+    position:absolute;
+    background: rebeccapurple;
+    transition:all 3s ease-in-out;
+    margin-left:30%;
+    margin-top: 10%;
+}
+
+div:hover {
+
+    /* width:250px;
+    height:250px;
+    transform: translate(150px); */
+    /*
+    instead of writting the above 3 lines  we could have also 
+    made the animation using only transform as we can see upon hovering 
+    the size of div is growing and the image is moving also
+    */
+    /* transform:scale(1.5) translate(150px); */
+    border-radius: 50%;
+    transform: rotate(360deg);
+    background-color: red;
+}
