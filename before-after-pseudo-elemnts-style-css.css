@@ -1,0 +1,71 @@
+
+.para{
+	
+	background-color: lightgrey;
+
+}
+
+.before-after::before {
+/*
+content: 'before the text ';
+font-family: cursive;
+font-size: 3rem;
+font-weight: bold;
+text-transform: capitalize;*/
+
+
+/* content: url(apple-icon.png); */
+ content: ''; 
+display: inline-block;
+height:40px;
+width: 40px;
+background-size: contain;
+background-image: url(https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.5/1646738284779/Microsoft.VisualStudio.Services.Icons.Default); 
+
+}
+
+.before-after::after {
+content: '';
+display: inline-block;
+height:40px;
+width: 40px;
+background-size: contain;
+background-image: url(apple-icon.png);
+/* content: url(apple-icon.png); */
+/* height: 40px;
+width: 40px;
+display: inline-block; */
+
+}
+
+/* applying quotation marks " or ' in text */
+
+.quoted-text::before{
+	content:'"';
+}
+.quoted-text::after{
+	content:'"';
+}
+/*  why is this not working when we use id in place of class */
+/* #after-text::after{
+	content:'"';
+}
+ #before-text::before{
+content:'"';
+} */
+
+/* adding image as bullets in unordered list */
+
+#style-list{
+	list-style-type: none;
+}
+
+.adding-image::before{
+   content: '';
+   display: inline-block;
+	height:15px;
+	width: 15px;
+	background-size: contain;
+	background-image: url(apple-icon.png);
+}
+
